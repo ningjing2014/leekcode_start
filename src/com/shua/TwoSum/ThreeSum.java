@@ -2,7 +2,7 @@ package com.shua.TwoSum;
 
 /**
  * @author lining
- * @date 18-10-11
+ * @date 18-10
  */
 public class ThreeSum implements INumberSum {
 
