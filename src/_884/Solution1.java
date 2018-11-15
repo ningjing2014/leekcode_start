@@ -5,16 +5,23 @@ import java.util.Stack;
 /**
  * @author lining
  * @date 18-11-15
+ * @实现思路：例用stack的特性来处理
  */
 public class Solution1 {
     public boolean isEquls(String str1, String str2) {
-        if (str1 == null && str2 == null) {
+        String stack = backSpace(str1);
+        String stack2 = backSpace(str2);
+        if (stack.equals(stack2)) {
             return true;
         }
+        return false;
 
-        Stack<Character> stack = new Stack<Character>();
-        if (str1 != null) {
-            for (Character character : str1.toCharArray()) {
+    }
+
+    private String backSpace(String str) {
+        Stack<Character> stack = new Stack<>();
+        if (str != null) {
+            for (Character character : str.toCharArray()) {
 
                 if ('#' == character) {
                     if (stack.isEmpty()) {
@@ -26,25 +33,7 @@ public class Solution1 {
                 }
             }
         }
-        Stack<Character> stack2 = new Stack<Character>();
-        if (str2 != null) {
-            for (Character character : str2.toCharArray()) {
-
-                if ('#' == character) {
-                    if (stack2.isEmpty()) {
-                        continue;
-                    }
-                    stack2.pop();
-                } else {
-                    stack2.push(character);
-                }
-            }
-        }
-
-        if (stack.toString().equals(stack2.toString())) {
-            return true;
-        }
-        return false;
-
+        return stack.toString();
     }
+
 }
