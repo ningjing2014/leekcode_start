@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * @author lining
- * @date 18-11-15 @实现思路：
+ * @date 18-11-15 @实现思路：双栈实现队列
  */
 public class Solution1<E> {
 
