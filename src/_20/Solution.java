@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author lining
  * @date 18-11-13
  */
-public class StatckDemo {
+public class Solution {
 
     public static void main(String[] args) {
         System.out.println(valid("(())"));
